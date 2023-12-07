@@ -8,17 +8,13 @@ terraform {
 }
 
 
+
+
 provider "aws" {
-  region     = "us-east-2"
-
+  version = "~> 5.0"
+  region  = "us-east-2"
+ profile = "default"
 }
-
-
-#provider "aws" {
-#  version = "~> 5.0"
-#  region  = "us-east-2"
-#  profile = "default"
-#}
 
 
 resource "aws_instance" "example" {
